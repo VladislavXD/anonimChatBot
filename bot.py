@@ -5,7 +5,7 @@ from database import Database
 from user import User
 from config import ADMINID
 import os
-
+from keep_alive import keep_alive
 user = User("db.db")
 db = Database("db.db")
 
@@ -15,6 +15,7 @@ total_users = 0
 total_messages = 0
 users = set()
 
+keep_alive()
 
 def analitycs(func):
     def analytics_wrapper(message):
