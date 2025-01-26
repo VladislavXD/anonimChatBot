@@ -4,12 +4,12 @@ from config import TOKEN
 from database import Database
 from user import User
 from config import ADMINID
-
+import os
 
 user = User("db.db")
 db = Database("db.db")
 
-bot = TeleBot(TOKEN)
+bot = TeleBot(os.environ.get('TOKEN'))
 
 total_users = 0
 total_messages = 0
